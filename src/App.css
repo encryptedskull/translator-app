@@ -36,3 +36,152 @@
     transform: rotate(360deg);
   }
 }
+
+body {
+  height: 100%;
+  width: 100%;
+  background: #282c34;
+  color: white;
+  overflow: hidden;
+}
+.header {
+  padding-inline: 10px;
+}
+.title {
+  color: #dedfe198;
+}
+.main-div {
+  height: 700px;
+  width: 100%;
+  background: #282c34;
+  color: white;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-div-child-1,
+.main-div-child-2 {
+  height: 270px;
+  width: 45%;
+  border: none;
+  box-shadow: 0px 0px 2px gray;
+  border-radius: 12px;
+  padding: 10px 20px;
+}
+
+.input-tag-eng {
+  height: 205px;
+  width: 100%;
+  background: transparent;
+  color: rgb(193, 193, 193);
+  resize: none;
+  outline: none;
+  font-size: 19px;
+  padding: 0 5px;
+  border: none;
+}
+
+.input-tag-urdu {
+  height: 205px;
+  width: 100%;
+  background: transparent;
+  color: rgb(193, 193, 193);
+  text-align: right;
+  resize: none;
+  outline: none;
+  border: none;
+  font-size: 19px;
+  padding: 0 5px;
+}
+
+.ele-div {
+  height: 50px;
+  width: 100%;
+  text-align: left;
+  align-content: center;
+  padding: 0 5px;
+}
+
+.paragraph {
+  margin: 0;
+  color: rgb(84, 84, 84);
+}
+
+.ele-btns {
+  height: 50px;
+  width: 100%;
+  padding: 0 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.res-btn {
+  height: 30px;
+  width: 100px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  color: rgb(222, 222, 222);
+  background: rgb(1, 77, 192);
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .main-div {
+    flex-direction: column;
+    height: auto;
+    gap: 20px;
+  }
+
+  .main-div-child-1,
+  .main-div-child-2 {
+    width: 90%;
+    height: auto;
+  }
+
+  .input-tag-eng,
+  .input-tag-urdu {
+    font-size: 16px;
+  }
+
+  .res-btn {
+    width: 80px;
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .App-header {
+    font-size: calc(8px + 2vmin);
+  }
+
+  .main-div {
+    flex-direction: column;
+    height: auto;
+    gap: 15px;
+  }
+
+  .main-div-child-1,
+  .main-div-child-2 {
+    width: 90%;
+    height: auto;
+    padding: 10px;
+  }
+
+  .input-tag-eng,
+  .input-tag-urdu {
+    font-size: 16px;
+  }
+
+  .res-btn {
+    width: 70px;
+    font-size: 12px;
+  }
+
+  .ele-div,
+  .ele-btns {
+    padding: 0 5px;
+  }
+}
