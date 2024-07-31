@@ -3,14 +3,27 @@ import React, { useState, useEffect } from "react";
 export default function Operation() {
   const [inputValue, setInputValue] = useState("");
   const [translatedText, setTranslatedText] = useState("");
+  const [isCopied, setCopied] = useState(false);
 
   function changeValue(e) {
     setInputValue(e.target.value);
   }
+  // function copyText() {
+  //   const text = document.getElementById("result-box");
+  //   text.select();
+  //   navigator.clipboard.writeText(text);
+  // }
   function copyText() {
-    const text = document.getElementById("result-box");
-    text.select();
-    navigator.clipboard.writeText(text);
+    const text = document.getElementById("result-box").value;
+    navigator.clipboard
+      .writeText(text)
+      .then(() => {
+        console.log("Text copied to clipboard");
+      })
+      .catch((err) => {
+        console.error("Failed to copy text: ", err);
+      });
+    setCopied(true);
   }
 
   function clearText() {
@@ -91,7 +104,7 @@ export default function Operation() {
           {translatedText && (
             <div className="ele-btns">
               <button className="res-btn" onClick={copyText}>
-                Copy
+                {isCopied ? "Copied" : "Copy"}
               </button>
               <button className="res-btn" onClick={clearText}>
                 Clear

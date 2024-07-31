@@ -42,7 +42,7 @@ body {
   width: 100%;
   background: #282c34;
   color: white;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 .header {
   padding-inline: 10px;
